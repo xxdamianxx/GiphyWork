@@ -22,7 +22,7 @@ function loadPage(){
 
 function loadGiphys(topic){
     $('#giphys').empty();
-    var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=" + API_KEY + "&limit=10");
+    var xhr = $.get("https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=" + API_KEY + "&limit=10");
     xhr.done(function(data) {
         let results = data["data"];
         console.log(JSON.stringify(results, null, 4));
